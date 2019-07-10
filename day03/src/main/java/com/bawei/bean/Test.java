@@ -4,7 +4,7 @@ public class Test {
 
 	  public void say(){
 		  
-		  System.out.println("代春燕");
+		  System.out.println("代春燕1");
 		  System.out.println("代春燕 2");
 	  }
 	  
