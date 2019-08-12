@@ -1,4 +1,4 @@
-package com.zsl.utils;
+package com.zsl.redis.utils;
 
 import java.util.HashSet;
 import java.util.Random;

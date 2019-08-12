@@ -1,4 +1,4 @@
-package com.zsl.test;
+package com.zsl.redis.test;
 
 import java.io.Serializable;
 import java.util.ArrayList;
@@ -12,9 +12,9 @@ import org.springframework.data.redis.core.RedisTemplate;
 import org.springframework.test.context.ContextConfiguration;
 import org.springframework.test.context.junit4.SpringJUnit4ClassRunner;
 
-import com.zsl.bean.User;
-import com.zsl.utils.RandomUitl;
-import com.zsl.utils.StringUtil;
+import com.zsl.redis.bean.User;
+import com.zsl.redis.utils.RandomUitl;
+import com.zsl.redis.utils.StringUtil;
 
 @RunWith(SpringJUnit4ClassRunner.class)
 @ContextConfiguration(locations="classpath:spring-beans2.xml")
@@ -34,9 +34,11 @@ public class RedisJsonTest {
 			   //往集合里面添加数据
 				  user.add(user2);
 		  }
-		    //定义开始的时间
+		    
+		   //定义开始的时间
 		     long startTime = System.currentTimeMillis();
 		    
+		     //遍历输出
 		     for (User user2 : user) {
 				redisTemplate.opsForValue().set("u_"+user2.getId(), user2);
 			}

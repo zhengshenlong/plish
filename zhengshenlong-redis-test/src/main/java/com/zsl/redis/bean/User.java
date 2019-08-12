@@ -1,4 +1,4 @@
-package com.zsl.bean;
+package com.zsl.redis.bean;
 
 import java.io.Serializable;
 
